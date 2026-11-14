@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>disable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Login_Sign_in</RootNamespace>
+    <AssemblyName>Login_Sign-in</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.OleDb" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="LGF.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="LGF.Designer.cs"><DependentUpon>LGF.cs</DependentUpon></Compile>
+    <Compile Update="SUF.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="SUF.Designer.cs"><DependentUpon>SUF.cs</DependentUpon></Compile>
+    <Compile Update="FPF.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="FPF.Designer.cs"><DependentUpon>FPF.cs</DependentUpon></Compile>
+    <Compile Update="DBF.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="DBF.Designer.cs"><DependentUpon>DBF.cs</DependentUpon></Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="*.accdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
